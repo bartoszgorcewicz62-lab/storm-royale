@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storm Royale — Top-Down Battle Royale</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="cv"></canvas>
+
+<div id="menu" class="overlay">
+  <h1>STORM ROYALE</h1>
+  <p class="tag">Top-down battle royale &middot; 30 combatants &middot; last one standing wins</p>
+  <div class="controls">
+    <b>WASD</b> move &nbsp;&middot;&nbsp; <b>Mouse</b> aim &nbsp;&middot;&nbsp; <b>Left click</b> shoot<br>
+    <b>R</b> reload &nbsp;&middot;&nbsp; <b>1-5</b> hotbar / use items &nbsp;&middot;&nbsp; <b>Wheel</b> cycle slots<br>
+    <b>Q / Right click</b> build wall (30 wood) &nbsp;&middot;&nbsp; <b>M</b> sound &nbsp;&middot;&nbsp; <b>ESC</b> pause<br>
+    <span class="dim">Walk over loot to grab it. Stay out of the storm.</span>
+  </div>
+  <button id="play">Play</button>
+</div>
+
+<div id="end" class="overlay hidden">
+  <h1 id="endTitle"></h1>
+  <p id="endMsg"></p>
+  <button id="again">Play Again</button>
+</div>
+
+<div id="pause" class="overlay hidden">
+  <p>PAUSED<br><span class="dim">press ESC to resume</span></p>
+</div>
+
+<script src="src/config.js"></script>
+<script src="src/utils.js"></script>
+<script src="src/sound.js"></script>
+<script src="src/map.js"></script>
+<script src="src/weapons.js"></script>
+<script src="src/loot.js"></script>
+<script src="src/player.js"></script>
+<script src="src/enemy.js"></script>
+<script src="src/storm.js"></script>
+<script src="src/ui.js"></script>
+<script src="src/game.js"></script>
+</body>
+</html>

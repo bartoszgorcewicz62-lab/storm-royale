@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storm Royale 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="cv"></canvas>
+<canvas id="hud"></canvas>
+
+<div id="menu" class="overlay">
+  <h1>STORM ROYALE 3D</h1>
+  <p class="tag">Third-person battle royale &middot; 30 combatants &middot; last one standing wins</p>
+  <div class="controls">
+    <b>WASD</b> move &nbsp;&middot;&nbsp; <b>Mouse</b> aim &nbsp;&middot;&nbsp; <b>Left click</b> shoot<br>
+    <b>Space</b> jump &nbsp;&middot;&nbsp; <b>Shift</b> sprint &nbsp;&middot;&nbsp; <b>R</b> reload<br>
+    <b>Q / Right click</b> build wall (30 wood) &nbsp;&middot;&nbsp; <b>1-5</b> hotbar &nbsp;&middot;&nbsp; <b>Wheel</b> cycle<br>
+    <b>M</b> sound &nbsp;&middot;&nbsp; <b>ESC</b> pause / release mouse<br>
+    <span class="dim">Click Play to lock the mouse. Walk over loot to grab it. Stay out of the storm.</span>
+  </div>
+  <button id="play">Play</button>
+  <button id="menuSettings" class="small">Settings</button>
+</div>
+
+<div id="settings" class="overlay hidden">
+  <h2 class="set-title">SETTINGS</h2>
+  <div class="set-grid">
+    <label>GRAPHICS QUALITY</label>
+    <select id="setQuality">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high" selected>High</option>
+      <option value="epic">Epic</option>
+    </select>
+    <label>3D RESOLUTION <span id="setResVal">100%</span></label>
+    <input type="range" id="setRes" min="50" max="100" step="5" value="100">
+    <label>FRAME RATE LIMIT</label>
+    <select id="setFps">
+      <option value="0">Unlimited</option>
+      <option value="30">30 FPS</option>
+      <option value="60">60 FPS</option>
+      <option value="120">120 FPS</option>
+      <option value="144">144 FPS</option>
+      <option value="240">240 FPS</option>
+    </select>
+    <label>SHOW FPS</label>
+    <input type="checkbox" id="setShowFps">
+    <label>FIELD OF VIEW <span id="setFovVal">80</span></label>
+    <input type="range" id="setFov" min="60" max="100" value="80">
+    <label>MOUSE SENSITIVITY <span id="setSensVal">1.0</span></label>
+    <input type="range" id="setSens" min="1" max="20" value="10">
+    <label>EDIT ON RELEASE</label>
+    <input type="checkbox" id="setEditRelease" checked>
+  </div>
+  <button id="settingsBack" class="small">Back</button>
+</div>
+
+<div id="end" class="overlay hidden">
+  <h1 id="endTitle"></h1>
+  <p id="endMsg"></p>
+  <button id="again">Play Again</button>
+</div>
+
+<div id="pause" class="overlay hidden">
+  <p>PAUSED</p>
+  <div class="btn-row">
+    <button id="resumeBtn" class="small">Resume</button>
+    <button id="pauseSettings" class="small">Settings</button>
+  </div>
+</div>
+
+<script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
+<script src="src3d/core.js"></script>
+<script src="src3d/characters.js"></script>
+<script src="src3d/game.js"></script>
+</body>
+</html>

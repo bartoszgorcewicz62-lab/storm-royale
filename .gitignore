@@ -1,0 +1,10 @@
+# Command Code internal
+.commandcode/
+
+# Dependencies
+node_modules/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
